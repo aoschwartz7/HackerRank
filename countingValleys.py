@@ -26,11 +26,12 @@ def countingValleys(n, s):
     for x in range(len(s)):
         if x == "D":
             lvl -= 1
-        if x == "U":
+        elif x == "U":
             lvl += 1
-        # if we just came UP to sea level
-        if lvl == 0 & x == "U":
-            valleys += 1
+            # if we just came UP to sea level
+            if lvl == 0 & x == "U":
+                valleys += 1
+
     print(valleys)
     return valleys
 
@@ -42,4 +43,4 @@ if __name__ == '__main__':
 
 
 # Questions I still have:
-# 1) the function runs with no errors but the print statement doesn't work
+# 1) only prints / returns 0 with this code; should print / return 2
