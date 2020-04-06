@@ -25,21 +25,50 @@
 
 def jumpingOnClouds(c):
     totalJumps = 0
+    x=0
 
-    for i in c:
-        # If element is a cloud, add +1 to totalJumps
-        if i == 0:
+    while (x < (len(c)-1)):
+        if c[x] == 0:
+            # first check if we can double-jump
+            # if x < (len(c)-2):
+            if c[x+2] == 0:
+                totalJumps += 1
+                x+=2
+        # if we can't double-jump, it has to be a single-jump
+        else:
             totalJumps += 1
-            print("line33")
-            # Now see if the next element in the array is also a cloud
-            if c[i+1] == 0:
-                print("line36")
-                # If it is a cloud, count this as a double jump by subtracting 1
-                #   from totalJumps
-                totalJumps -= 1
+            x+=1
 
     return totalJumps
 
+# when we get to the last cloud,
+
+
 if __name__ == '__main__':
-    c = [0,1,0,0,0,1,0]
+    c = [0,1,0,0,0,1,0,0]
     print(jumpingOnClouds(c))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    #
