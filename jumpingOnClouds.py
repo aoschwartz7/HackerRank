@@ -28,9 +28,8 @@ def jumpingOnClouds(c):
     x=0
 
     while (x < (len(c)-1)):
-        if c[x] == 0:
-            # first check if we can double-jump
-            # if x < (len(c)-2):
+        # first check if we can double-jump
+        if x < (len(c)-2):
             if c[x+2] == 0:
                 totalJumps += 1
                 x+=2
@@ -41,11 +40,9 @@ def jumpingOnClouds(c):
 
     return totalJumps
 
-# when we get to the last cloud,
-
-
 if __name__ == '__main__':
-    c = [0,1,0,0,0,1,0,0]
+    # shortest number of jumps should be 4 for this array
+    c = [0,1,0,0,0,1,0,1,0]
     print(jumpingOnClouds(c))
 
 
