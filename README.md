@@ -1,2 +1,2 @@
 # HackerRank
-contains problems i've submitted for Hacker Rank challenges (hackerrank.com)
+contains problems i've submitted for HackerRank challenges (hackerrank.com)
